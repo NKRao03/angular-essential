@@ -1,0 +1,5 @@
+  <section>
+    <app-media-iteme *ngFor = "let item of mediaItems"
+    [mediaItemToWatch]="item"
+      (delete)="onMediaItemDelete($event)"></app-media-iteme>
+  </section>
