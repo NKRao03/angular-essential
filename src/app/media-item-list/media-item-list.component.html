@@ -1,5 +1,9 @@
   <section>
+    <header>
+      <div>{{mediaItems | categoryList}}</div>
+    </header><br>
     <app-media-iteme *ngFor = "let item of mediaItems"
     [mediaItemToWatch]="item"
-      (delete)="onMediaItemDelete($event)"></app-media-iteme>
+      (delete)="onMediaItemDelete($event)"
+      [ngClass] = "{'medium-movies': item.medium === 'Movies', 'medium-series': item.medium === 'Series'}"></app-media-iteme>
   </section>
